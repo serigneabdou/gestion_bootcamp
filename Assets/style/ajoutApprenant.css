@@ -1,0 +1,53 @@
+.container_form {
+    background-color:  #508bfc;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container_form .section_left {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    /* background: #000; */
+}
+
+.container_form .section_left .titre {
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+.container_form .section_left input {
+    all: unset;
+    padding: 15px 10px;
+    border-radius: 10px;
+    /* From https://css.glass */
+    /* background: rgba(255, 255, 255, 0.48);
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px); */
+    /* border: 1px solid rgba(255, 255, 255, 0.38); */
+    width: 100%;
+    margin-bottom: 10px;
+
+    /* From https://css.glass */
+background: rgba(255, 255, 255, 0.73);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(12.1px);
+-webkit-backdrop-filter: blur(12.1px);
+border: 1px solid rgba(255, 255, 255, 0.68);
+}
+.container_form .btn_valider {
+    all: unset;
+    background-color: white;
+    color: #508bfc;
+    padding: 15px 70px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+
+
+
