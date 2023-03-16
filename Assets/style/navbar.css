@@ -1,0 +1,41 @@
+/* ############################## SIDEBAR ################################################################3 */
+.sidebar_link {
+    color: black;
+    font-size: 1.2rem;
+    /* outline: 1px solid black; */
+    margin: 10px 0;
+    padding: 10px 20px !important;
+    border-radius: 20px !important;
+    transition: all ease-in-out 300ms;
+}
+.sidebar_link:hover {
+    color: white !important;
+    background-color: black;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+/* #################################################### NAVBAR ############################################################ */
+.logo_navbar {
+    width: 150px;
+    height: 50px;
+    object-fit: cover;
+}
+.profil_user {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    /* object-fit: cover; */
+    /* background-color: #E56131; */
+    border: 1px solid #E56131;
+    cursor: pointer;
+}
+.icon-badge {
+    font-size: 10px;
+     outline: 1px black solid;
+     border-radius: 50%;
+}
+.icon {
+    z-index: 5;
+    cursor: pointer;
+}

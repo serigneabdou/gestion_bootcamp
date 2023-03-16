@@ -1,0 +1,28 @@
+
+.main {
+    position: relative;
+    top: 77px;
+}
+.container_banner {
+    background-image: url('../image/bg-banner.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: calc(100vh - 77px);
+    width: 100%; 
+}
+.container_banner .banner {
+    height: calc(100vh - 77px); 
+    background-color: rgba(0, 0, 0, 0.575);
+    display: flex;
+    align-items: center;
+}
+
+
+
+/* ##################################################  */
+.icon_book {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-right: 20px;
+}

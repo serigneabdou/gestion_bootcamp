@@ -1,0 +1,25 @@
+.main {
+    position: relative;
+    top: 77px;
+}
+.icon_book {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+/*  */
+.programme_website {
+    /* outline: 1px solid black; */
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+.status_programme {
+    background-color: rgba(0, 128, 0, 0.527);
+    color: green;
+    padding: 7px 10px;
+    border-radius: 5px;
+    font-weight: 500;
+}

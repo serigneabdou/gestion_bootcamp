@@ -1,0 +1,59 @@
+.container_logo {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+.logo_connexion {
+    width: 150px;
+    height: 50px;
+    object-fit: cover;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    overflow: hidden !important;
+    height: 100vh;
+    width: 100vw;
+}
+.conteneur {
+    height: 100vh;
+}
+.container_left {
+    height: 100vh;
+    /* background-image: url('/Assets/image/connexion.png') !important;
+    background-repeat: no-repeat;
+    background-size: cover; */
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+.input {
+    width: 75%;
+    border: none;
+    outline: none;
+    margin: 20px 0;
+    border-bottom: 1px solid black;
+}
+.btn_connexion {
+    background-color: #E56131;
+    color: white;
+    padding: 7px 30px;
+    border: none;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+.container_left {
+    height: 100vh;
+}
+@media all and (max-width : 768px) {
+    .input {
+        width: 100%;
+    }
+}

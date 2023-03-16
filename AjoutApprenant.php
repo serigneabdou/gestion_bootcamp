@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="Assets/style/ajoutApprenant.css">
 </head>
 <body>
+<?php include ('Includes/Navbar.php'); ?>
 <div class="container_form">
     <div class="container">
         <div class="row">
