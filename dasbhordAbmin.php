@@ -1,3 +1,6 @@
+<?php require('Actions/securityAction.php');?>
+<?php require('Actions/dashbordAction.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

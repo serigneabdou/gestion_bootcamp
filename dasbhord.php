@@ -1,5 +1,6 @@
 <?php require('Actions/securityAction.php');?>
-<?php require('Actions/dashbordAction.php');?>
+<?php require('Actions/dashbordAction.php');
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,7 +14,7 @@
         <div class=container_banner>
             <div class="p-4 p-md-5 mb-4 text-white banner">
               <div class="col-md-6 px-0">
-                <h1 class="display-4 fst-italic">Bienvenue <span class="name_user"><?php echo $prenomUser;?></span> dans notre  bootcamp</h1>
+                <h1 class="display-4 fst-italic">Bienvenue <span class="fw-bold px-5"><?php if(isset($prenomUser)) {echo $prenomUser;}?></span> dans notre  bootcamp</h1>
                 <p class="lead my-3">
                     Vous étes inscrit dans le programme.
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo magnam doloribus ab provident placeat omnis nesciunt ex consequuntur sit nisi!

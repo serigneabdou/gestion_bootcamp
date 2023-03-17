@@ -1,6 +1,9 @@
 <?php 
 try {
-    session_start();    
+    if(!isset($_SESSION)) 
+    { 
+        session_start(); 
+    } 
     $bd = new PDO('mysql:host=localhost;dbname=coursbcamp;charset=utf8', 'root', '');
     // echo "connexion réussie";   
 } catch (Exception $e) {

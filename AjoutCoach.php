@@ -1,15 +1,30 @@
+<?php include ('Actions/AjoutCoursAction.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <?php include ('Includes/head.php'); ?>
-    <?php include ('Actions/AjoutCoursAction.php'); ?>
-    <title>ajout cours</title>
-    <link rel="stylesheet" href="./Assets/style/ajoutCours.css">
+    <!-- <link rel="stylesheet" href="./Assets/style/ajoutCours.css"> -->
+    <link rel="stylesheet" href="./Assets/style/listApprenant.css" >
+    <style>
+        .main {
+    position: relative;
+    top: 90px;
+    }
+
+    .btn_valider {
+    all: unset;
+    background-color: white;
+    /* color: ; */
+    padding: 15px 70px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+    </style>
 </head>
 <body>
-   
-    <main class="main">
-        <div class="container_form">
+    <?php include ('Includes/Navbar.php'); ?>
+        <div class="container_form main">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 section_left">
@@ -71,6 +86,6 @@
             </div>
        
         </div>
-    </main>
+
 </body>
 </html>

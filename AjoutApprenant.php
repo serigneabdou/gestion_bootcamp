@@ -8,7 +8,7 @@
 </head>
 <body>
 <?php include ('Includes/Navbar.php'); ?>
-<div class="container_form">
+<div class="container_form main">
     <div class="container">
         <div class="row">
             <div class="col-md-6 section_left">

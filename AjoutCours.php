@@ -3,14 +3,13 @@
 <head>
     <?php include ('Includes/head.php'); ?>
     <?php include ('Actions/AjoutCoursAction.php'); ?>
-    <title>ajout cours</title>
     <link rel="stylesheet" href="./Assets/style/ajoutCours.css">
 </head>
 <body>
-
-        <div class="container-body">
+<?php include ('Includes/Navbar.php'); ?>
+        <div class="container-body main">
             <div class="container_card">
-                <div class="container_logo">
+                <div class="containeur_logo">
                     <img src="Assets/image/cours.png" alt="LOGO" class="logo_connexion">
                 </div>
                 <?php if(isset($_POST['valider'])) {

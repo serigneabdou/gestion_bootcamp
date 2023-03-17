@@ -1,13 +1,17 @@
-.container_logo {
+.containeur_logo {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
-
+.main {
+    position: relative;
+    top: 70px;
+}
 .titre-ajout{
     /* margin-top: -70px; */
     text-align: center;
 }
-.container_logo img{
+.containeur_logo img{
     width: 150px;
     height: 150px;
     border-radius: 50%;
@@ -17,7 +21,7 @@
 
 
 }
-* {
+*{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
