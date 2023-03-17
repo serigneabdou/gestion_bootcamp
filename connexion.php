@@ -8,7 +8,7 @@
     <div class="row align-items-center conteneur">
         <div class="container_left my-auto col-md-7 ps-5 d-none d-md-flex">
             <div class="">
-                <p class="fs-2 text-uppercase">Bonjour, <br> et Bienvenue dans Bootcamp online</p>
+                <p class="fs-2 text-uppercase text-center">Bonjour, <br> et Bienvenue dans Bootcamp online</p>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus provident voluptatem quod ducimus officia hic eius debitis numquam rem, dignissimos dolore voluptates blanditiis minima quaerat aliquam at! Temporibus non a facere doloremque molestiae suscipit magnam, repudiandae voluptatum voluptatibus dolorum magni repellendus veniam omnis alias illo vero commodi ab nesciunt tempore!</p>
             </div>
         </div>
@@ -22,7 +22,7 @@
                     <input type="text" name="email" placeholder="Entrez votre email" class="input">
                 </div>
                 <div class="">
-                    <input type="text" name="email" placeholder="Entrez votre email" class="input">
+                    <input type="text" name="password" placeholder="Entrez votre Mot de Passe" class="input">
                 </div>
                 <button class="btn_connexion">Se connecter</button>
             </div>
