@@ -1,3 +1,5 @@
+<?php require ('Actions/connexionAction.php') ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,15 +18,18 @@
             <div class="container_logo">
                     <img src="Assets/image/logo.png" alt="LOGO" class="logo_connexion">
             </div>
-            <div class="d-flex flex-column justify-content-center align-items-center">
+            <div class="d-flex d-md-block flex-column justify-content-center align-items-center ms-md-4">
                 <p class="fs-2 text-uppercase ">Identifiez-vous</p>
-                <div class="">
-                    <input type="text" name="email" placeholder="Entrez votre email" class="input">
-                </div>
-                <div class="">
-                    <input type="text" name="password" placeholder="Entrez votre Mot de Passe" class="input">
-                </div>
-                <button class="btn_connexion">Se connecter</button>
+                <form action="" method="POST">
+                    <?php if(isset($errorMsg)) {echo '<p>'.$errorMsg.'<p>';} ?>
+                    <div class="">
+                        <input type="email" name="email" placeholder="Entrez votre email" class="input">
+                    </div>
+                    <div class="">
+                        <input type="tel" name="password" placeholder="Entrez votre mot de pass" class="input">
+                    </div>
+                    <button class="btn_connexion" name="connexion">Se connecter</button>
+                </form>
             </div>
         </div>
     </div>

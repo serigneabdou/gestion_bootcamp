@@ -1,3 +1,4 @@
+<?php require('Actions/securityAction.php');?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

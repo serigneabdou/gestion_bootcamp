@@ -2,11 +2,9 @@
     position: relative;
     top: 77px;
 }
-body{
-    background-color: rgba(0, 0, 0, 0.5);
-}
+
 .container_form {
-    
+    background-color: rgba(0, 0, 0, 0.5);
     height: 100vh;
     display: flex;
     justify-content: center;

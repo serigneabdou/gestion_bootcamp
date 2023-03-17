@@ -11,6 +11,7 @@ if(isset($_POST['valider']))
         $email = htmlspecialchars($_POST['email']);
         $tel = htmlspecialchars($_POST['tel']);
         $specialite = htmlspecialchars($_POST['specialite']);
+        $status = "caoch";
 
         $userExist = $bd -> prepare('SELECT emailcoach FROM coach WHERE emailcoach = ? ');
         $userExist -> execute(array($email));
@@ -20,13 +21,16 @@ if(isset($_POST['valider']))
             
             $insertApprenant = $bd -> prepare('INSERT INTO coach(prenomcoach ,nomcoach ,adressecoach ,emailcoach,telephonecoach, specialite) VALUES (?,?,?,?,?,?);');
             $insertApprenant->execute(array($prenom,$nom,$adress,$email,$tel,$specialite));
-            $msgSucces = "coach ajouté";                                                                
+
+            $insertUser = $bd -> prepare('INSERT INTO users(emailUser , telUser, statusUser)VALUES(? , ? , ?);');
+            $insertUser->execute(array($email , $tel , $status));
+
+            $msgSucces = "coach ajouté";       
+
 
         } else {
             $msgError = "Le coach est déjà inscript";
         }
-
-
     } else {
         $msgError = "Vieullez remplire tous les champs...";
     }
