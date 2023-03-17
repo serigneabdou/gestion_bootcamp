@@ -1,0 +1,80 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container_logo {
+    display: flex;
+    justify-content: center;
+ 
+}
+
+.titre-ajout{
+    text-align: center;
+    margin-top: 0;
+}
+.container_logo img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: contain;
+    background-color: #eee;
+    margin-top: -200px;
+
+}
+
+.container-body{
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.container_card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+    height: 90vh;
+    width: 40%;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    padding: 40px;
+    border-radius: 20px;
+
+}
+
+.input {
+    width: 100%;
+    border: none;
+    outline: none;
+    margin: 15px 0;
+    border-bottom: 1px solid black;
+}
+.textarea{
+    width: 100%;
+    border: 1px solid #555;
+    padding: 5px;
+    color: #111;
+    outline: none;
+    font-size: 16px;
+    font-weight: 300;
+    resize: none;
+
+}
+.btn_connexion {
+    background-color: #E56131;
+    color: white;
+    padding: 7px 30px;
+    border: none;
+    border-radius: 20px;
+  
+}
+
+@media all and (max-width : 768px) {
+    .input {
+        width: 100%;
+    }
+}

@@ -1,104 +1,78 @@
-
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <?php include ('Includes/head.php'); ?>
     <?php include ('Actions/AjoutCoursAction.php'); ?>
     <title>ajout cours</title>
     <link rel="stylesheet" href="./Assets/style/ajoutCours.css">
-    <style>
-        body{
-            background-color: gray;
-        }
-        .formulaire{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        } 
-        
-    </style>
 </head>
 <body>
-    <div class="container mt-5  ">
-            <form class="formulaire" method="POST" enctype="multipart/form-data">
-                <div class="row">
+ 
+        <div class="container-body">
+            <div class="container_card">
+                <div class="container_logo">
+                    <img src="Assets/image/cours.png" alt="LOGO" class="logo_connexion">
+                </div>
                 <?php if(isset($_POST['valider'])) {
-                    if(isset($msgSucces)) { echo '<h4 class="alert alert-success">'.$msgSucces.'</h4>';}
-                    if(isset($msgError)) { echo '<h4 class="aert alert-danger w-100">'.$msgError.'</h4>' ;}
+                    if(isset($msgSucces)) { echo '<h5 class="alert alert-success ">'.$msgSucces.'</h5>';}
+                    if(isset($msgError)) { echo '<h5 class="aert alert-danger ">'.$msgError.'</h5>' ;}
                     }
                     ?>
-               <h2>ajouter un cours</h2>
-           <div class="col-md-6 p-2">
-                <div class="form-floating">
-                    <input type="text" class="form-control" name="titre" placeholder="Titre du Cours">
-                    <label for="titre">Titre du Cours</label>
-                </div> 
-            </div>
-            <div class="col-md-6 p-2">
-                <div class="form-floating">
-                    <input type="number" class="form-control" name="duree" placeholder="duree">
-                    <label for="duree">Duree du Cours</label>
-                </div> 
-            </div>
-           <div class="col-md-12">
-                <div class="form-floating">
-                    <textarea class="form-control" placeholder="description" name="description"></textarea>
-                    <label for="description">Description du Cours</label>
-                </div>
-           </div>
-            <div class="col-md-6 p-2">
-                <div class="form-floating">
-                    <input type="text" class="form-control" name="url" placeholder="">
-                    <label for="url">Url du video</label>
-                </div> 
-            </div>
-            <div class="col-md-6 p-2">
-                <div class="form-floating">
-                    <input type="file" class="form-control" name="fichier" placeholder="fichier ">
-                    <label for="fichier" class="p-2">Fichier</label>
-                </div> 
-            </div>
-            <div class="col-md-6 p-2">
-                    <select name="coach" id="coach" class="form-select">
-                        <option value="">Selectionnez votre coach</option>
-                        <?php 
-                        include ('connexiondb.php'); 
-                         $requete = 'SELECT  * FROM coach ';
-                         $result = $bd->query($requete);
-                       while($line = $result-> fetch()){
-                        echo "<option value = '$line[0]'>$line[1]</option>";
-                       }
-                         ?>
-                    </select>
-            </div>
-            <div class="col-md-6 p-2">
-                    <select name="programme" id="programme" class="form-select">
-                        <option value="1">Selectionnez votre programme</option>
-                        <?php 
-                        include ('connexiondb.php'); 
-                         $requete = 'SELECT  * FROM programme';
-                         $result = $bd->query($requete);
+               
+                    <h4 class="titre-ajout ">Ajoutez un Cours</h4>
+                    <form  method="POST" enctype="multipart/form-data">
+                    <div class="">
+                        <input type="text" name="titre" placeholder="Titre du Cours" class="input">
+                    </div>
+                    <div class="">
+                        <input type="number" name="duree" placeholder="Duree du Cours" class="input">
+                    </div>
+                    
+                    <div class="">
+                        <input type="text" name="url" placeholder="Url du video" class="input">
+                    </div>
+                    <div class="">
+                        <input type="file" name="fichier" placeholder="Selectionner un fichier" class="input">
+                    </div>
+                    <div class="">
+                        <select name="coach" id="coach" class="form-select input">
+                            <option value="">Selectionnez votre coach</option>
+                            <?php 
+                            include ('connexiondb.php'); 
+                            $requete = 'SELECT  * FROM coach ';
+                            $result = $bd->query($requete);
                         while($line = $result-> fetch()){
                             echo "<option value = '$line[0]'>$line[1]</option>";
-                       }
-                         ?>
-                    </select>
+                        }
+                            ?>
+                        </select>
+                    </div>
+                    <div class="">
+                        <select name="programme" id="programme" class="form-select input">
+                            <option value="1">Selectionnez votre programme</option>
+                            <?php 
+                            include ('connexiondb.php'); 
+                            $requete = 'SELECT  * FROM programme';
+                            $result = $bd->query($requete);
+                            while($line = $result-> fetch()){
+                                echo "<option value = '$line[0]'>$line[1]</option>";
+                        }
+                            ?>
+                        </select>
+                    </div>
+                    <div class="">
+                        <textarea  placeholder = "Description Cours" class="textarea" name="description">
+
+                        </textarea>
+                    </div>
+                    
+                    <button class="btn_connexion" type="submit" name="valider" style="width:100%;margin-top:10px">Ajouter</button>
+
+                    </form>
+                    
             </div>
-            
-
-            <div class="col-md-12">
-               <button type="submit" name="valider" class="btn btn-success form-control">Enregistrer</button>
-             </div>
-           </div>
-            </form>
-
-        
-    </div>
-
-    <br><br><br>
-
- 
-   
-    
+       
+        </div>
+    <!-- </div> -->
 </body>
 </html>
