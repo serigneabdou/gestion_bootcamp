@@ -14,6 +14,8 @@ if(isset($_POST['connexion'])) {
 
         if($IfUserExist -> rowCount() > 0) {
 
+            // #################################### RECUP APPRENANT ################################################
+
             $_SESSION['auth'] = true;
             $_SESSION['email'] = $email;
             $_SESSION['password'] = $password;

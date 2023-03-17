@@ -1,3 +1,4 @@
+
 <link rel="stylesheet" href="Assets/style/navbar.css">
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
       <div class="container-fluid mx-md-3">
@@ -11,14 +12,14 @@
           </div>
         </div>
         <div class="d-flex   align-items-center">
-          <div class="me-3 fs-3 d-md-block d-none">
+          <!-- <div class="me-3 fs-3 d-md-block d-none">
             <i class="ri-notification-line position-relative icon">
               <span class="position-absolute top-0 start-50 icon-badge translate-middle badge bg-danger">
                 99+
               </span>
             </i>
             <i class="ri-chat-1-line icon"></i>
-          </div>
+          </div> -->
           <div class="dropdown position-relative ">
             <img src="Assets/image/user.png" alt="profil_user" class="profil_user btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
             <ul class="dropdown-menu position-absolute top-100 start-0 translate-middle menu_deconnexion" aria-labelledby="dropdownMenuButton1">
@@ -26,6 +27,11 @@
               <li><a class="dropdown-item" href="Actions/logoutAction.php">Deconnexion</a></li>
               <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
             </ul>
+          </div>
+          <div class="d-flex flex-column ms-2">
+          <?php if(isset($prenomUser)) { echo '<p class="m-0 text-uppercase">'.$prenomUser.'</p>';} ?>
+          <?php if(isset( $nomUser)) { echo '<p class="m-0">'. $_SESSION['status'].'</p>';} ?>
+            <!-- <p class=""></p> -->
           </div>
           
         </div>
