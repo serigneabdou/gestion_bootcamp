@@ -13,7 +13,6 @@
 
     </head>
     <body>
-    <?php include ('Includes/Navbar.php'); ?>
     <div class="container">
     <div class="table-responsive">
         <div class="table-wrapper">

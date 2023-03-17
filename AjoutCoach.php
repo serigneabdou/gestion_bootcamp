@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./Assets/style/ajoutCours.css">
 </head>
 <body>
-    <?php include ('Includes/Navbar.php'); ?>
+   
     <main class="main">
         <div class="container_form">
             <div class="container">
