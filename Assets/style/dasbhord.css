@@ -26,3 +26,8 @@
     object-fit: cover;
     margin-right: 20px;
 }
+.name_user {
+    background-color: black !important;
+    font-style: italic;
+
+}
