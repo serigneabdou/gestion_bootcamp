@@ -2,71 +2,77 @@
 <html lang="en">
 <head>
     <?php include ('Includes/head.php'); ?>
-    <?php include ('Actions/AjoutCoachAction.php'); ?>
-
-    <link rel="stylesheet" href="Assets/style/ajoutApprenant.css">
+    <?php include ('Actions/AjoutCoursAction.php'); ?>
+    <title>ajout cours</title>
+    <link rel="stylesheet" href="./Assets/style/ajoutCours.css">
 </head>
 <body>
-<div class="container_form">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 section_left">
-                <div class="">
-                    <h1 class="text-white titre">Ajouter un coach</h1>
-                    <form action="AjoutCoach.php" method="POST">
-                        <?php if(isset($_POST['valider'])) {
-                        if(isset($msgSucces)) { echo '<h4 class="text-success">'.$msgSucces.'</h4>';}
-                        if(isset($msgError)) { echo '<h4 class="text-danger w-100">'.$msgError.'</h4>' ;}
+ 
+        <div class="container-body">
+            <div class="container_card">
+                <div class="container_logo">
+                    <img src="Assets/image/cours.png" alt="LOGO" class="logo_connexion">
+                </div>
+                <?php if(isset($_POST['valider'])) {
+                    if(isset($msgSucces)) { echo '<h5 class="alert alert-success ">'.$msgSucces.'</h5>';}
+                    if(isset($msgError)) { echo '<h5 class="aert alert-danger ">'.$msgError.'</h5>' ;}
+                    }
+                    ?>
+               
+                    <h4 class="titre-ajout ">Ajoutez un Cours</h4>
+                    <form  method="POST" enctype="multipart/form-data">
+                    <div class="">
+                        <input type="text" name="titre" placeholder="Titre du Cours" class="input">
+                    </div>
+                    <div class="">
+                        <input type="number" name="duree" placeholder="Duree du Cours" class="input">
+                    </div>
+                    
+                    <div class="">
+                        <input type="text" name="url" placeholder="Url du video" class="input">
+                    </div>
+                    <div class="">
+                        <input type="file" name="fichier" placeholder="Selectionner un fichier" class="input">
+                    </div>
+                    <div class="">
+                        <select name="coach" id="coach" class="form-select input">
+                            <option value="">Selectionnez votre coach</option>
+                            <?php 
+                            include ('connexiondb.php'); 
+                            $requete = 'SELECT  * FROM coach ';
+                            $result = $bd->query($requete);
+                        while($line = $result-> fetch()){
+                            echo "<option value = '$line[0]'>$line[1]</option>";
                         }
-                        ?>
+                            ?>
+                        </select>
+                    </div>
+                    <div class="">
+                        <select name="programme" id="programme" class="form-select input">
+                            <option value="1">Selectionnez votre programme</option>
+                            <?php 
+                            include ('connexiondb.php'); 
+                            $requete = 'SELECT  * FROM programme';
+                            $result = $bd->query($requete);
+                            while($line = $result-> fetch()){
+                                echo "<option value = '$line[0]'>$line[1]</option>";
+                        }
+                            ?>
+                        </select>
+                    </div>
+                    <div class="">
+                        <textarea  placeholder = "Description Cours" class="textarea" name="description">
 
-                        <div class="row mb-3 ligne-row">
-                            <div class="col-md-6">
-                                <div class="form-floating me-2">
-                                    <input type="text" class="form-control" name="prenom" placeholder="Prénom">
-                                    <label for="prenom">Prénom</label>
-                                </div>   
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control" name="nom" placeholder="Nom">
-                                    <label for="nom">Nom</label>
-                                </div> 
-                            </div>
-                        </div>
-    
-                        <div class="form-floating mb-3">
-                            <input type="text" class="form-control" name="adress" placeholder="Adress">
-                            <label for="adress">Adress</label>
-                        </div> 
-    
-                        <div class="form-floating mb-3">
-                            <input type="email" class="form-control" name="email" placeholder="Email">
-                            <label for="email">Email</label>
-                        </div> 
-    
-                        <div class="form-floating mb-3 w-100">
-                            <input type="tel" class="form-control" name="tel" placeholder="Tel">
-                            <label for="tel">Téléphone</label>
-                        </div> 
-                        <div class="form-floating mb-3 w-100">
-                            <input type="specialite" class="form-control" name="specialite" placeholder="specialite">
-                            <label for="specialite">Specialite</label>
-                        </div>
-                        <div class="form-floating mb-3 w-100">
-                            <button type="submit" name="valider" class="btn_valider">Submit</button>
-                        </div>
-                        
+                        </textarea>
+                    </div>
+                    
+                    <button class="btn_connexion" type="submit" name="valider" style="width:100%;margin-top:10px">Ajouter</button>
+
                     </form>
-                </div>
+                    
             </div>
-            <div class="col-md-6">
-                <div class="conteneur_img">
-                    <img src="Assets/image/prof.png" alt="profil-header" class="">
-                </div>
-            </div>
+       
         </div>
-    </div>
-</div>
+    <!-- </div> -->
 </body>
 </html>
