@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <?php include ('Includes/head.php'); ?>
-    <?php include ('Actions/AjoutCoachAction.php'); ?>
-
-    <link rel="stylesheet" href="Assets/style/ajoutApprenant.css">
+    <?php include ('Actions/AjoutCoursAction.php'); ?>
+    <title>ajout cours</title>
+    <link rel="stylesheet" href="./Assets/style/ajoutCours.css">
 </head>
 <body>
     <?php include ('Includes/Navbar.php'); ?>
@@ -69,6 +69,7 @@
                     </div>
                 </div>
             </div>
+       
         </div>
     </main>
 </body>
