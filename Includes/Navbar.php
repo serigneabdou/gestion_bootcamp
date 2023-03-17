@@ -15,12 +15,19 @@
             <i class="ri-notification-line position-relative icon">
               <span class="position-absolute top-0 start-50 icon-badge translate-middle badge bg-danger">
                 99+
-                <!-- <span class="visually-hidden">unread messages</span> -->
               </span>
             </i>
             <i class="ri-chat-1-line icon"></i>
           </div>
-          <img src="Assets/image/user.png" alt="profil_user" class="profil_user">
+          <div class="dropdown position-relative ">
+            <img src="Assets/image/user.png" alt="profil_user" class="profil_user btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            <ul class="dropdown-menu position-absolute top-100 start-0 translate-middle menu_deconnexion" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item" href="#">Profil</a></li>
+              <li><a class="dropdown-item" href="Actions/logoutAction.php">Deconnexion</a></li>
+              <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+            </ul>
+          </div>
+          
         </div>
       </div>
 
@@ -39,10 +46,6 @@
             <a class="nav-link sidebar_link" href="dasbhord.php">Acceuil</a>
             <a class="nav-link sidebar_link" href="#item-2">Cours</a>
             <a class="nav-link sidebar_link" href="#item-3">Coach</a>
-            <!-- <nav class="nav nav-pills flex-column">
-              <a class="nav-link ms-3 my-1" href="#item-3-1">Item 3-1</a>
-              <a class="nav-link ms-3 my-1" href="#item-3-2">Item 3-2</a>
-            </nav> -->
           </nav>
         </div>
       </div>
