@@ -77,7 +77,7 @@ table.table tr th, table.table tr td {
     </style>
     </head>
     <body>
-
+    <?php include ('Includes/Navbar.php'); ?>
     <div class="container-lg">
     <div class="table-responsive">
         <div class="table-wrapper">

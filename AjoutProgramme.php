@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="./Assets/style/ajoutProgramme.css">
 </head>
 <body>
- 
+<?php include ('Includes/Navbar.php'); ?>
         <div class="container-body">
             <div class="container_card">
-                <div class="container_logo">
+                <div class="container_logos">
                     <img src="Assets/image/programme.png" alt="LOGO" class="logo_connexion">
                 </div>
                 <?php if(isset($_POST['valider'])) {

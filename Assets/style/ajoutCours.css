@@ -2,10 +2,7 @@
     display: flex;
     justify-content: center;
 }
-.logo_connexion {
-    
-    /* object-fit: cover; */
-}
+
 .titre-ajout{
     /* margin-top: -70px; */
     text-align: center;
@@ -16,7 +13,7 @@
     border-radius: 50%;
     object-fit: contain;
     background-color: #eee;
-    margin-top: -70px;
+    margin-top: -20px;
 
 
 }
