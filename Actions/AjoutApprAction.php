@@ -26,7 +26,8 @@ if(isset($_POST['valider']))
             $insertUser = $bd -> prepare('INSERT INTO users(emailUser , telUser, statusUser)VALUES(? , ? , ?);');
             $insertUser->execute(array($email , $tel , $status));
 
-            $msgSucces = "Apprenant ajouté";                                                                
+            $msgSucces = "Apprenant ajouté";  
+            header('location: ListApprenant.php') ;                                                         
 
         } else {
             $msgError = "L'apprenant est déjà inscript à ce programmme .";

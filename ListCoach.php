@@ -108,18 +108,25 @@ table.table tr th, table.table tr td {
                           
                              $result = $bd->query($requete);
                             while($row = $result->fetch()){ 
+                                $id =  $row['idcoach'] ;
+                                $nomCoach= $row['nomcoach'];
+                                $prenomCoach = $row['prenomcoach'];
+                                $addressCoach= $row['adressecoach'] ;
+                                $emailCoach = $row['emailcoach'];
+                                $specialite =  $row['specialite'];
+                                $phoneCoach =  $row['telephonecoach'];
                                    echo "<tr>";
-                                       echo  "<td>" . $row['idcoach'] . "</td>";
-                                       echo  "<td>" . $row['nomcoach'] . "</td>";
-                                        echo "<td>" . $row['prenomcoach'] ."</td>";
-                                        echo "<td>" . $row['adressecoach'] ."</td>";
-                                        echo "<td>" . $row['emailcoach'] ."</td>";
-                                        echo "<td>" . $row['specialite'] ."</td>";
-                                        echo "<td>" . $row['telephonecoach'] . "</td>";
-                                        echo "<td> 
-                                                  <i class='delete fa-solid fa-trash '></i>
-                                                  <i class='edit fa-solid fa-pen-to-square'></i>
-                                             </td>";
+                                       echo  "<td>" . $id. "</td>";
+                                       echo  "<td>" .  $nomCoach . "</td>";
+                                        echo "<td>" . $prenomCoach ."</td>";
+                                        echo "<td>" . $addressCoach ."</td>";
+                                        echo "<td>" . $emailCoach ."</td>";
+                                        echo "<td>" . $specialite ."</td>";
+                                        echo "<td>" . $phoneCoach . "</td>";
+                                        echo  "<td> 
+                                        <a href = 'delete.php? deleteCoach=".$id."'><i class=' fa fa-solid fa-trash btn btn-danger'></i></a>
+                                       <a href='update.php? updateCoach=".$id."'> <i class=' fa fa-solid fa-pen-to-square btn btn-warning text-white'></i></a>
+                                    </td>";
                                     echo "</tr>";}
                             ?>  
                 </tbody>

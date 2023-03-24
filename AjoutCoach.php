@@ -1,4 +1,6 @@
-<?php include ('Actions/AjoutCoursAction.php'); ?>
+<?php include ('Actions/AjoutCoachAction.php');
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,25 +42,25 @@
                                 <div class="row mb-3 ligne-row">
                                     <div class="col-md-6">
                                         <div class="form-floating me-2">
-                                            <input type="text" class="form-control" name="prenom" placeholder="Prénom">
+                                            <input type="text" class="form-control"   name="prenom" placeholder="Prénom">
                                             <label for="prenom">Prénom</label>
                                         </div>   
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-floating">
-                                            <input type="text" class="form-control" name="nom" placeholder="Nom">
+                                            <input type="text" class="form-control"  name="nom" placeholder="Nom">
                                             <label for="nom">Nom</label>
                                         </div> 
                                     </div>
                                 </div>
             
                                 <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" name="adress" placeholder="Adress">
+                                    <input type="text" class="form-control"  name="adress" placeholder="Adress">
                                     <label for="adress">Adress</label>
                                 </div> 
             
                                 <div class="form-floating mb-3">
-                                    <input type="email" class="form-control" name="email" placeholder="Email">
+                                    <input type="email" class="form-control"  name="email" placeholder="Email">
                                     <label for="email">Email</label>
                                 </div> 
             

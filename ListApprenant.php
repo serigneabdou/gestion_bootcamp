@@ -40,17 +40,23 @@
                                 
                             $result = $bd->query($requete);
     
-                            while($row = $result->fetch()){ 
+                            while($row = $result->fetch()){
+                                $id =  $row['idappr'] ;
+                                $nomAppr= $row['nomappr'];
+                                $prenomAppr = $row['prenomappr'];
+                                $addressAppr= $row['adresseappr'] ;
+                                $emailAppr = $row['emailappr'];
+                                $phoneAppr =  $row['telephoneappr']; 
                                         echo "<tr>";
-                                            echo  "<td>" . $row['idappr'] . "</td>";
-                                            echo  "<td>" . $row['nomappr'] . "</td>";
-                                                echo "<td>" . $row['prenomappr'] ."</td>";
-                                                echo "<td>" . $row['adresseappr'] ."</td>";
-                                                echo "<td>" . $row['emailappr'] ."</td>";
-                                                echo "<td>" . $row['telephoneappr'] . "</td>";
-                                                echo "<td class=''> 
-                                                        <i class='delete fa-solid fa-trash '></i>
-                                                        <i class='edit fa-solid fa-pen-to-square'></i>
+                                            echo  "<td>" . $id . "</td>";
+                                            echo  "<td>" .  $nomAppr . "</td>";
+                                                echo "<td>" . $prenomAppr ."</td>";
+                                                echo "<td>" . $addressAppr ."</td>";
+                                                echo "<td>" . $emailAppr ."</td>";
+                                                echo "<td>" . $phoneAppr . "</td>";
+                                                echo "<td> 
+                                                       <a href='delete.php? deleteAppr=".$id."'><i class=' fa fa-solid fa-trash btn btn-danger ' ></i></a>
+                                                        <a> href='update.php? updateCoach=".$id."'<i class=' fa fa-solid fa-pen-to-square btn btn-warning text-white'></i></a>
                                                     </td>";
                                             
                                                 
