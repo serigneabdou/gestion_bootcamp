@@ -1,4 +1,4 @@
-<?php include ('Actions/AjoutCoursAction.php'); ?>
+<?php include ('Actions/AjoutCoachAction.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -4,7 +4,7 @@ include ('connexiondb.php');
 
 // ############################### AJOUTER UN COACH #############################################################
 if(isset($_POST['valider']))
-    if(!empty($_POST['prenom'])) {
+if(!empty($_POST['prenom'])) {
         $prenom = htmlspecialchars($_POST['prenom']); 
         $nom = htmlspecialchars($_POST['nom']) ;
         $adress = htmlspecialchars($_POST['adress']);

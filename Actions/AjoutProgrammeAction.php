@@ -15,8 +15,7 @@ if(isset($_POST['valider']))
     $insert = $bd -> prepare('INSERT INTO programme(titre ,description, domaine) VALUES (?,?,?);');
     $insert->execute(array($titre,$description,$domaine));
     $msgSucces = "le programme s'est bel et bien insere";
-   
-   
+    
  }
  else{
    $msgError = "Vieullez saisir tous les champs...";
