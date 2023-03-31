@@ -50,7 +50,7 @@
         <div class="offcanvas-body">
           <nav class="nav nav-pills flex-column">
             <a class="nav-link sidebar_link" href="dasbhord.php">Acceuil</a>
-            <a class="nav-link sidebar_link" href="AjoutCours.php">Cours</a>
+            <a class="nav-link sidebar_link" href="ListCours.php">Cours</a>
             <a class="nav-link sidebar_link" href="ListApprenant.php">Apprenants</a>
             <a class="nav-link sidebar_link" href="ListCoach.php">Coach</a>
             <a class="nav-link sidebar_link" href="AjoutProgramme.php">Programme</a>

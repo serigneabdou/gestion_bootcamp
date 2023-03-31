@@ -41,7 +41,7 @@
                             $requete = 'SELECT  * FROM coach ';
                             $result = $bd->query($requete);
                         while($line = $result-> fetch()){
-                            echo "<option value = '$line[0]'>$line[1]</option>";
+                            echo "<option value = '$line[0]'>".$line[1]." ".$line[2]."</option>";
                         }
                             ?>
                         </select>

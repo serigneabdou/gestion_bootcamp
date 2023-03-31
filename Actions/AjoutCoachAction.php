@@ -1,5 +1,6 @@
 <?php 
 // ############################################ CONNEXION BD ###################################################
+require('Actions/securityAction.php');
 include ('connexiondb.php'); 
 
 // ############################### AJOUTER UN COACH #############################################################
@@ -25,7 +26,8 @@ if(!empty($_POST['prenom'])) {
             $insertUser = $bd -> prepare('INSERT INTO users(emailUser , telUser, statusUser)VALUES(? , ? , ?);');
             $insertUser->execute(array($email , $tel , $status));
 
-            $msgSucces = "coach ajouté";       
+            $msgSucces = "coach ajouté";   
+            header('location: ListCoach.php') ;      
 
 
         } else {
