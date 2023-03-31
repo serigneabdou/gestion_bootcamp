@@ -1,6 +1,9 @@
+
 <?php include ('Actions/AjoutCoachAction.php');
 
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,22 +11,7 @@
     <!-- <link rel="stylesheet" href="./Assets/style/ajoutCours.css"> -->
     <link rel="stylesheet" href="./Assets/style/ajoutCoach.css">
     <!-- <link rel="stylesheet" href="./Assets/style/listApprenant.css"> -->
-    <style>
-        .main {
-    position: relative;
-    top: 90px;
-    }
-
-    .btn_valider {
-    all: unset;
-    background-color: white;
-    /* color: ; */
-    padding: 15px 70px;
-    border-radius: 30px;
-    font-weight: 700;
-    font-size: 1.1rem;
-}
-    </style>
+  
 </head>
 <body>
     <?php include ('Includes/Navbar.php'); ?>

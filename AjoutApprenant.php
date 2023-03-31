@@ -3,23 +3,53 @@
 <head>
     <?php include ('Includes/head.php'); ?>
     <?php include ('Actions/AjoutApprAction.php'); ?>
-
-    <link rel="stylesheet" href="Assets/style/ajoutApprenant.css">
+    <link rel="stylesheet" href="./Assets/style/ajoutCoach.css">
+    <!-- <link rel="stylesheet" href="./Assets/style/ajoutApprenant.css"> -->
 </head>
 <body>
 <?php include ('Includes/Navbar.php'); ?>
-<div class="container_form main">
+<!--==================TEST==========================-->
+<div class="container-body main">
+            <div class="container-card">
+                <div class="conteneur_img">
+                     <img src="Assets/image/header-img.png" alt="profil-header" class="ajoutApprenant-img">
+                 </div>
+                 <?php if(isset($_POST['valider'])) {
+                        if(isset($msgSucces)) { echo '<p class="alert alert-success">'.$msgSucces.'</p>';}
+                        if(isset($msgError)) { echo '<p class="alert alert-danger w-100">'.$msgError.'</p>' ;}
+                        }
+                        ?>
+                         <h1 class="titleCoach">Ajouter un Apprenant</h1>
+                 <form action="AjoutCoach.php" method="POST">
+                        <div class="">
+                            <input type="text" name='prenom' placeholder="Prenom" class="input"/>
+                        </div>
+                        <div class="">
+                            <input type="text" name='nom' placeholder="Nom" class="input"/>
+                        </div>
+                        <div class="">
+                            <input type="text" name='adress' placeholder="Adresse" class="input"/>
+                        </div>
+                        <div class="">
+                            <input type="email" name='email' placeholder="Email" class="input"/>
+                        </div>
+                        <div class="">
+                            <input type="tel" name='tel' placeholder="Numéro Téléphone" class="input"/>
+                        </div>
+                        
+                        <button type="submit" name="valider" class="btn-valider">Ajouter</button>
+                 </form>
+            </div>
+       </div>
+    <!--==================TEST==========================-->
+<!--<div class="container_form main">
     <div class="container">
         <div class="row">
             <div class="col-md-6 section_left">
                 <div class="">
                     <h1 class="text-white titre">Ajouter un apprenant</h1>
                     <form action="AjoutApprenant.php" method="POST">
-                        <?php if(isset($_POST['valider'])) {
-                        if(isset($msgSucces)) { echo '<p class="alert alert-success">'.$msgSucces.'</p>';}
-                        if(isset($msgError)) { echo '<p class="alert alert-danger w-100">'.$msgError.'</p>' ;}
-                        }
-                        ?>
+                      
 
                         <div class="row mb-3 ligne-row">
                             <div class="col-md-6">
@@ -62,6 +92,6 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 </body>
 </html>
