@@ -56,7 +56,7 @@
                                                 echo "<td>" . $phoneAppr . "</td>";
                                                 echo "<td> 
                                                        <a href='delete.php? deleteAppr=".$id."'><i class=' fa fa-solid fa-trash btn btn-danger ' ></i></a>
-                                                        <a> href='update.php? updateCoach=".$id."'<i class=' fa fa-solid fa-pen-to-square btn btn-warning text-white'></i></a>
+                                                        <a><i class=' fa fa-solid fa-pen-to-square btn btn-warning text-white'></i></a>
                                                     </td>";
                                             
                                                 
