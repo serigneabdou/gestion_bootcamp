@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 <?php include ('Actions/AjoutCoachAction.php');
 
 ?>
+=======
+<?php include ('Actions/AjoutCoachAction.php'); ?>
+>>>>>>> 43526d5 (logique liste cours)
 <!DOCTYPE html>
 <html lang="en">
 <head>
