@@ -92,6 +92,10 @@ body {
     border: 1px solid #000;
 
 }
+.buttun:hover{
+    border: 1px solid #fff;
+
+}
 .title_list{
     color: #fff;
 }
@@ -101,12 +105,6 @@ body {
     <body>
     <?php include ('Includes/Navbar.php'); ?>
     <div class="container parant-list ">
-            <!-- <div class="row">
-                    <div class="col-sm-8"><h2>Liste des  <b>Cours</b></h2></div>
-                    <div class="col-sm-4">
-                        <button type="button" class="btn btn-info add-new" onclick="window.location.href = 'AjoutCours.php'"><i class="fa fa-plus"></i>Ajouter un nouveau Cours</button>
-                    </div>
-            </div> -->
             <div class="row justify-content-center ">
                 <div class="col-md-5 px-0 title_list"><h2>Liste des  <b>Cours</b></h2></div>
                 <div class="col-md-5 d-flex justify-content-end px-0">
@@ -132,7 +130,7 @@ body {
                         echo "<div >";
                             echo "<h3>" . $row['libelle'] . "</h3>";
                             echo "<p>" . $row['detail'] ."</p>";
-                            echo "<p class='suivi'>Coach: <span class='titre_cours'>".$row['prenomcoach']."</span></p>";
+                            echo "<p class='suivi'>Coach: <span class='titre_cours'>".$row['prenomcoach']." ".$row['nomcoach']."</span></p>";
                             echo "<p class='cours-en'>Domaine: <span class='prof'>". $row['domaine']."</span></p>";
                             echo "<h6>Titre: <span class ='titre'>".$row['titre']."</span></h6>";
                             echo "<h6>Duree: <span class ='duree'>".$row['dure']."heurs</span></h6>";

@@ -8,7 +8,6 @@
 <html lang="en">
 <head>
     <?php include ('Includes/head.php'); ?>
-    <!-- <link rel="stylesheet" href="./Assets/style/ajoutCours.css"> -->
     <link rel="stylesheet" href="./Assets/style/listApprenant.css" >
     <style>
         .main {
